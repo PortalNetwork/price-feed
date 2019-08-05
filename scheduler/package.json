@@ -1,0 +1,15 @@
+{
+  "name": "price-feed-listener",
+  "version": "0.1.0",
+  "description": "Price Oracle Listener",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0",
+    "web3": "^1.2.0"
+  }
+}
