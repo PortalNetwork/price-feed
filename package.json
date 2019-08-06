@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "request-promise": "^4.2.4",
     "web3": "^1.2.0"
   },
