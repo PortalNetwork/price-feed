@@ -25,4 +25,8 @@ contract PriceOracle is Ownable {
   function infinite() public onlyOwner {
       expire = 0;
   }
+
+  function getTime() external view returns(uint) {
+      return block.timestamp;
+  }
 }
