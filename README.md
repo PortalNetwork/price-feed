@@ -15,4 +15,5 @@ Oracle contract and scheduler for supported token price.
 ```
 truffle compile
 truffle migrate --reset
+truffle test
 ```
