@@ -9,12 +9,12 @@ contract PriceOracle is Ownable {
   uint public price;
   uint32 public expire;
 
-  event PriceChanged(uint price);
+  event PriceChanged(uint price, uint32 expire);
 
   function setPrice(uint _price, uint32 _expire) public onlyOwner {
       price = _price;
       expire = _expire;
-      emit PriceChanged(_price);
+      emit PriceChanged(_price, _expire);
   }
 
   function getPrice() external view returns(uint) {
@@ -26,7 +26,4 @@ contract PriceOracle is Ownable {
       expire = 0;
   }
 
-  function getTime() external view returns(uint) {
-      return block.timestamp;
-  }
 }

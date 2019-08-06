@@ -10,4 +10,9 @@ Oracle contract and scheduler for supported token price.
 
 - [PriceScheduler](./scheduler.index.js)
 
+## Run
 
+```
+truffle compile
+truffle migrate --reset
+```

@@ -26,7 +26,7 @@ async function startOracleScheduler() {
     //console.log('#1 price:', nowPrice);
     // set price to PriceOracle contract
 
-    await priceOracle.methods.setPrice(price, time + 6000).send({from: account});
+    await priceOracle.methods.setPrice(price, time + 600).send({from: account});
 
     const nextPrice = await priceOracle.methods.getPrice().call();
     console.log('price:', nextPrice);

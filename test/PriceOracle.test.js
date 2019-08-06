@@ -23,11 +23,11 @@ contract('PriceOracle', (accounts) => {
   it('should set price by contract owner', async () => {
     const priceOracle = await PriceOracle.deployed();
 
-    await priceOracle.setPrice(web3.utils.toWei("231.9", "ether"), 1565064000, {from: accounts[0]});
+    const time = parseInt((new Date()).getTime().toString().substring(0, 10), 10);
+
+    await priceOracle.setPrice(web3.utils.toWei("231.9", "ether"), time + 600, {from: accounts[0]});
 
     const price = await priceOracle.getPrice.call();
-
-    const time = await priceOracle.getTime.call();
 
     assert.equal(price.toString(10), web3.utils.toWei("231.9", "ether"));
   }); 
